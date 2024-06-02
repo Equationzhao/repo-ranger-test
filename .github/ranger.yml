@@ -10,13 +10,11 @@ labels:
   duplicate: close
   wontfix: close
   invalid: close
-  'merge when passing': merge
-  'rebase when passing': rebase
   'new contributor':
     delay: 5s
-	message: "Thanks for making your first contribution! :slightly_smiling_face:"
+	comment: "Thanks for making your first contribution! :slightly_smiling_face:"
   question:
-    message: "This has been marked question, further information is requested"
+    comment: "This has been marked question, further information is requested"
 
 comments: 
   - action: label 
