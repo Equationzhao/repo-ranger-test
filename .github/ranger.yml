@@ -1,3 +1,29 @@
 merges:
   - action: delete_branch
 
+default:
+  comment:
+    message: '⚠️ This has been marked $LABEL by the maintainers'
+  close:
+    comment: '⚠️ This has been marked to be closed in $DELAY'
+    delay: '30 days'
+
+labels:
+  duplicate: 
+    action: close
+    delay: 15s
+    message: '⚠️ Duplicate! Closing in $DELAY ...'
+  wontfix: close
+  invalid: close
+  'merge when passing': merge
+  'rebase when passing': rebase
+  'new contributor':
+    action: comment
+    delay: 5s
+	  message: "Thanks for making your first contribution! :slightly_smiling_face:"
+
+comments: # As of now `label` is the only valid action that can be triggered by # comments, and is a required field 
+  - action: label # either a string or a string representation of a regular expresssion 
+    pattern: /duplicate of/i 
+    labels: 
+      - duplicate 
