@@ -10,8 +10,6 @@ labels:
   duplicate: close
   wontfix: close
   invalid: close
-  'merge when passing': merge
-  'rebase when passing': rebase
   'new contributor':
     delay: 5s
 	comment: "Thanks for making your first contribution! :slightly_smiling_face:"
